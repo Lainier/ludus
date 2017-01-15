@@ -23,8 +23,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
         
-        public function ausias()
+        public function ludus()
         {
-            $this->load->view('message_ausias');
+            $this->load->view('message_ludus');
         }
 }

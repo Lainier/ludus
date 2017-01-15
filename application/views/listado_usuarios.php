@@ -12,16 +12,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
     <div class="container">
         <h2><?php echo $title; ?></h2>
-            <?php foreach ($productos as $producto): ?>
+            <?php foreach ($usuarios as $usuario): ?>
         <div class="row">
-            <div class="col-md-4">
-                <?php echo $producto->nombreProd; ?>
+            <div class="col-md-2">
+                <?php echo $usuario->username; ?>
             </div>
             <div class="col-md-4">
-                <?php echo $producto->precioE; ?>
+                <?php echo $usuario->first_name.' '.$usuario->last_name; ?>
             </div>
-            <div class="col-md-4">
-                <?php echo $producto->existencias; ?>
+            <div class="col-md-1">
+                <?php echo $usuario->date_of_birth; ?>
+            </div>
+            <div class="col-md-2">
+                <?php echo $usuario->email; ?>
+            </div>
+            <div class="col-md-3">
+                <a href="<?php echo 'evento/eventos_usuario/'.$usuario->id; ?>">Eventos</a>
             </div>
         </div><?php endforeach; ?>
     </div>
